@@ -32,7 +32,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 
     background-color: white;
     width: 250px;
@@ -43,6 +42,7 @@ section#login {
 
     transition: width 1s, height 1s;
     transition-timing-function: ease;
+     transform: translate(-50%, -50%);
 } 
 
 section#login > div#imagem {
@@ -68,15 +68,41 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #8a15d8;
+    border: 2px solid  #8a15d8;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
 display: none;
+}
+
+div.campo > span {
+    color: white;
+    
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 44px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px);
+
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+
 }
 
 form > input[type=submit] {
@@ -97,15 +123,16 @@ form > input[type=submit]:hover {
 form > a.botao {
     display: block;
     text-align: center;
+    text-decoration: none;
     font-size: 1em;
     width: 100%;
     height: 40%;
-    padding-top: 5px;
-    margin-top: ;
-    background-color: #6cd3cf;
-    border: 1 px solid #49a09d;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 5px;
+    background-color: #fdffff;
+    border: 1px solid #49a09d;
     border-radius: 5px;
-    text-decoration: none;
 }
 
 form > a.botao:hover {
@@ -114,4 +141,5 @@ form > a.botao:hover {
 
 form > a.botao > i {
     font-size: 0.8em;
+
 }
